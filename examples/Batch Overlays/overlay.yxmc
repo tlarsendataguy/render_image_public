@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="102" y="102" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>FileName</Name>
+          <DefaultAnnotationText>FileName</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="NewImage">
+        <Position x="210" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Width>1280</Width>
+          <Height>720</Height>
+          <Color>#ffffffff</Color>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="New Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="New Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="New Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="NewImageEntry" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="210" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="x" />
+            <Field name="y" />
+            <Field name="width" />
+            <Field name="height" />
+            <Field name="line width" />
+            <Field name="line color" />
+            <Field name="fill color" />
+            <Field name="corner radius" />
+          </Fields>
+          <Data>
+            <r>
+              <c>99</c>
+              <c>2</c>
+              <c>1082</c>
+              <c>716</c>
+              <c>4</c>
+              <c>#555555</c>
+              <c>#000000</c>
+              <c>34.0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ipad</AnnotationText>
+          <DefaultAnnotationText>ipad</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="width" source="TextInput:" type="Int16" />
+            <Field name="height" source="TextInput:" type="Int16" />
+            <Field name="line width" source="TextInput:" type="Byte" />
+            <Field name="line color" size="7" source="TextInput:" type="String" />
+            <Field name="fill color" size="7" source="TextInput:" type="String" />
+            <Field name="corner radius" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="DrawPrimitives">
+        <Position x="306" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <LineWidth>line width</LineWidth>
+          <LineColor>line color</LineColor>
+          <LineDash>
+          </LineDash>
+          <LineEndCap>
+          </LineEndCap>
+          <FillColor>fill color</FillColor>
+          <TypeOf>Rectangle</TypeOf>
+          <Group>
+          </Group>
+          <PathX1>
+          </PathX1>
+          <PathY1>
+          </PathY1>
+          <PathX2>
+          </PathX2>
+          <PathY2>
+          </PathY2>
+          <PathX3>
+          </PathX3>
+          <PathY3>
+          </PathY3>
+          <PathX4>
+          </PathX4>
+          <PathY4>
+          </PathY4>
+          <X>x</X>
+          <Y>y</Y>
+          <Radius>
+          </Radius>
+          <Width>width</Width>
+          <Height>height</Height>
+          <Sides>
+          </Sides>
+          <CornerRadius>corner radius</CornerRadius>
+          <Rotation>
+          </Rotation>
+          <StartAngle>
+          </StartAngle>
+          <EndAngle>
+          </EndAngle>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Draw Primitives" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="DrawPrimitivesEntry" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="210" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="x" />
+            <Field name="y" />
+            <Field name="radius" />
+            <Field name="line width" />
+            <Field name="line color" />
+            <Field name="fill color" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1125.5</c>
+              <c>360</c>
+              <c>27.5</c>
+              <c>2</c>
+              <c>#181818</c>
+              <c>#020202</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>home button</AnnotationText>
+          <DefaultAnnotationText>home button</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="x" source="TextInput:" type="Double" />
+            <Field name="y" source="TextInput:" type="Int16" />
+            <Field name="radius" source="TextInput:" type="Double" />
+            <Field name="line width" source="TextInput:" type="Byte" />
+            <Field name="line color" size="7" source="TextInput:" type="String" />
+            <Field name="fill color" size="7" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="DrawPrimitives">
+        <Position x="402" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <LineWidth>line width</LineWidth>
+          <LineColor>line color</LineColor>
+          <LineDash>
+          </LineDash>
+          <LineEndCap>
+          </LineEndCap>
+          <FillColor>fill color</FillColor>
+          <TypeOf>Circle</TypeOf>
+          <Group>
+          </Group>
+          <PathX1>
+          </PathX1>
+          <PathY1>
+          </PathY1>
+          <PathX2>
+          </PathX2>
+          <PathY2>
+          </PathY2>
+          <PathX3>
+          </PathX3>
+          <PathY3>
+          </PathY3>
+          <PathX4>
+          </PathX4>
+          <PathY4>
+          </PathY4>
+          <X>x</X>
+          <Y>y</Y>
+          <Radius>radius</Radius>
+          <Width>
+          </Width>
+          <Height>
+          </Height>
+          <Sides>
+          </Sides>
+          <CornerRadius>
+          </CornerRadius>
+          <Rotation>
+          </Rotation>
+          <StartAngle>
+          </StartAngle>
+          <EndAngle>
+          </EndAngle>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Draw Primitives" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="DrawPrimitivesEntry" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="OpenImage">
+        <Position x="402" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageFile>screenshots\%Question.ControlParam.FileName%</ImageFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Open Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Open Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Open Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="OpenImageEntry" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="ScaleImage">
+        <Position x="498" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <Width>888</Width>
+          <Height>0</Height>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Scale Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Scale Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Scale Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="ScaleImageEntry" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="OverlayImage">
+        <Position x="594" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SourceField>image</SourceField>
+          <OverlayField>image</OverlayField>
+          <Left>181</Left>
+          <Top>27</Top>
+          <Rotation>0</Rotation>
+          <RotationX>0</RotationX>
+          <RotationY>0</RotationY>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Merge Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Merge Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Merge Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="OverlayImageEntry" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="ExportImage">
+        <Position x="690" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <SaveAs>output\%Question.ControlParam.FileName%</SaveAs>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image path" type="V_String" source="Export Image" size="2147483647" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="ExportImageEntry" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="786" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Primitives" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="9" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Primitives" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="13" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Overlay" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.FileName</Name>
+        <Value>ipad01.PNG</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (15)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>overlay</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5e7f99cc-a6dc-4971-b7e5-96ea4e34ce5c" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="5e7f99cc-a6dc-4971-b7e5-96ea4e34ce5c" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (1)</Name>
+          <ToolId value="1" />
+          <Questions>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>FileName</Description>
+              <Name>FileName</Name>
+              <ToolId value="2" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (15)</Description>
+              <Name>Macro Output (15)</Name>
+              <ToolId value="15" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AllSame</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>FileName</Name>
+            <Description>FileName</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="15" Selected="True" />
+        <Tool ToolId="9" Selected="True" />
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+        <Tool ToolId="13" Selected="True" />
+        <Tool ToolId="14" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

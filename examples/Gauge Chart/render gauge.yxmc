@@ -1,0 +1,1805 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="OpenImage">
+        <Position x="1038" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageFile>needle.png</ImageFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Open Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Open Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Open Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="OpenImageEntry" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="OverlayImage">
+        <Position x="1134" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SourceField>image</SourceField>
+          <OverlayField>image</OverlayField>
+          <Left>0</Left>
+          <Top>0</Top>
+          <Rotation>-90</Rotation>
+          <RotationX>250</RotationX>
+          <RotationY>250</RotationY>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Merge Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Merge Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Merge Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="OverlayImageEntry" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="ExportImage">
+        <Position x="1230" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <SaveAs>%Question.ControlParam.Name%.png</SaveAs>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image path" type="V_String" source="Export Image" size="2147483647" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="ExportImageEntry" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="174" y="138" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1326" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="174" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Achieved</Name>
+          <DefaultAnnotationText>Achieved</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="54" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Name</Name>
+          <DefaultAnnotationText>Name</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="330" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Segments</Name>
+          <DefaultAnnotationText>Segments</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Segments" />
+            <Field name="Start Color" />
+            <Field name="End Color" />
+          </Fields>
+          <Data>
+            <r>
+              <c>9</c>
+              <c>#994F00</c>
+              <c>#006CD1</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>color blind
+friendly</AnnotationText>
+          <DefaultAnnotationText>color blind
+friendly</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="330" y="138" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="174" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>Segment</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>0</Expression_Init>
+          <Expression_Cond>Segment &lt; [Segments]</Expression_Cond>
+          <Expression_Loop>[Segment] + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="270" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="([Segment] / [Segments] * 180) - 90" field="Start Angle" size="8" type="Double" />
+            <FormulaField expression="IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" field="Start Angle" size="8" type="Double" />
+            <FormulaField expression="(([Segment] + 1) / [Segments] * 180) - 90" field="End Angle" size="8" type="Double" />
+            <FormulaField expression="IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" field="End Angle" size="8" type="Double" />
+            <FormulaField expression="[Segments] - 1" field="Segments" size="1" type="Byte" />
+            <FormulaField expression="[Segment] / Segments" field="Ratio" size="8" type="Double" />
+            <FormulaField expression="IF   [Ratio] &lt; 0.5&#xA;THEN 'lower'&#xA;ELSE 'upper'&#xA;ENDIF" field="range type" size="2147483647" type="V_String" />
+            <FormulaField expression="IF   [range type] = 'lower'&#xA;THEN [Ratio] / 0.5&#xA;ELSE ([Ratio] - 0.5) / 0.5&#xA;ENDIF" field="color ratio" size="8" type="Double" />
+            <FormulaField expression="'butt'" field="end cap" size="2147483647" type="V_String" />
+            <FormulaField expression="50" field="Line Width" size="8" type="Double" />
+            <FormulaField expression="250 - ([Line Width] / 2)" field="Radius" size="8" type="Double" />
+            <FormulaField expression="250" field="x" size="8" type="Int64" />
+            <FormulaField expression="250" field="y" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Format and Size</AnnotationText>
+          <DefaultAnnotationText>Start Angle = ([Segment] / [Segments] * 180) - 90
+Start Angle = IF   [Segment] &gt;...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="range type" size="2147483647" source="Formula: IF   [Ratio] &lt; 0.5&#xA;THEN 'lower'&#xA;ELSE 'upper'&#xA;ENDIF" type="V_String" />
+            <Field name="color ratio" source="Formula: IF   [range type] = 'lower'&#xA;THEN [Ratio] / 0.5&#xA;ELSE ([Ratio] - 0.5) / 0.5&#xA;ENDIF" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="NewImage">
+        <Position x="750" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Width>500</Width>
+          <Height>260</Height>
+          <Color>#ffffffff</Color>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="New Image" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="New Image" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="New Image" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="NewImageEntry" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="DrawPrimitives">
+        <Position x="942" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <LineWidth>Line Width</LineWidth>
+          <LineColor>line color</LineColor>
+          <LineDash>
+          </LineDash>
+          <LineEndCap>end cap</LineEndCap>
+          <FillColor>
+          </FillColor>
+          <TypeOf>Arc</TypeOf>
+          <Group>
+          </Group>
+          <PathX1>
+          </PathX1>
+          <PathY1>
+          </PathY1>
+          <PathX2>
+          </PathX2>
+          <PathY2>
+          </PathY2>
+          <PathX3>
+          </PathX3>
+          <PathY3>
+          </PathY3>
+          <PathX4>
+          </PathX4>
+          <PathY4>
+          </PathY4>
+          <X>x</X>
+          <Y>y</Y>
+          <Radius>Radius</Radius>
+          <Width>
+          </Width>
+          <Height>
+          </Height>
+          <Sides>
+          </Sides>
+          <CornerRadius>
+          </CornerRadius>
+          <Rotation>
+          </Rotation>
+          <StartAngle>Start Angle</StartAngle>
+          <EndAngle>End Angle</EndAngle>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Draw Primitives" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="DrawPrimitivesEntry" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="366" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Group</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType size="6">String</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="range type" size="2147483647" source="Formula: IF   [Ratio] &lt; 0.5&#xA;THEN 'lower'&#xA;ELSE 'upper'&#xA;ENDIF" type="V_String" />
+            <Field name="color ratio" source="Formula: IF   [range type] = 'lower'&#xA;THEN [Ratio] / 0.5&#xA;ELSE ([Ratio] - 0.5) / 0.5&#xA;ENDIF" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="462" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Middle Color R] - [Start Color R]" field="r range" size="2" type="Int16" />
+            <FormulaField expression="[Middle Color G] - [Start Color B]" field="g range" size="2" type="Int16" />
+            <FormulaField expression="[Middle Color B] - [Start Color B]" field="b range" size="2" type="Int16" />
+            <FormulaField expression="'lower'" field="range type" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>lower range</AnnotationText>
+          <DefaultAnnotationText>r range = [Middle Color R] - [Start Color R]
+g range = [Middle Color G] - [Start...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Middle Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Middle Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Start Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="Middle Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="End Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: [Middle Color R] - [Start Color R]" type="Int16" />
+            <Field name="g range" source="Formula: [Middle Color G] - [Start Color B]" type="Int16" />
+            <Field name="b range" source="Formula: [Middle Color B] - [Start Color B]" type="Int16" />
+            <Field name="range type" size="2147483647" source="Formula: 'lower'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="174" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Start Color" />
+            <Field name="Middle Color" />
+            <Field name="End Color" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn><![CDATA[ R]]></NewFieldAddOn>
+          <NewFieldAddOnPos>Suffix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>HexToNumber(Substring([_CurrentField_],1,2))</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Int16" size="2" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>r</AnnotationText>
+          <DefaultAnnotationText>HexToNumber(Substring([_CurrentField_],1,2))</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Middle Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="270" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Start Color" />
+            <Field name="Middle Color" />
+            <Field name="End Color" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn><![CDATA[ G]]></NewFieldAddOn>
+          <NewFieldAddOnPos>Suffix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>HexToNumber(Substring([_CurrentField_],3,2))</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Int16" size="2" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>g</AnnotationText>
+          <DefaultAnnotationText>HexToNumber(Substring([_CurrentField_],3,2))</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Middle Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Middle Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="366" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Start Color" />
+            <Field name="Middle Color" />
+            <Field name="End Color" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn><![CDATA[ B]]></NewFieldAddOn>
+          <NewFieldAddOnPos>Suffix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>HexToNumber(Substring([_CurrentField_],5,2))</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Int16" size="2" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>b</AnnotationText>
+          <DefaultAnnotationText>HexToNumber(Substring([_CurrentField_],5,2))</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Middle Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Middle Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Start Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="Middle Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="End Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="462" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[End Color R] - [Middle Color R]" field="r range" size="2" type="Int16" />
+            <FormulaField expression="[End Color G] - [Middle Color G]" field="g range" size="2" type="Int16" />
+            <FormulaField expression="[End Color B] - [Middle Color B]" field="b range" size="2" type="Int16" />
+            <FormulaField expression="'upper'" field="range type" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>upper range</AnnotationText>
+          <DefaultAnnotationText>r range = [End Color R] - [Middle Color R]
+g range = [End Color G] - [Middle Col...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Middle Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Middle Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Start Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="Middle Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="End Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: [End Color R] - [Middle Color R]" type="Int16" />
+            <Field name="g range" source="Formula: [End Color G] - [Middle Color G]" type="Int16" />
+            <Field name="b range" source="Formula: [End Color B] - [Middle Color B]" type="Int16" />
+            <Field name="range type" size="2147483647" source="Formula: 'upper'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Start Color R" selected="True" rename="start r" />
+            <SelectField field="Start Color G" selected="True" rename="start g" />
+            <SelectField field="Start Color B" selected="True" rename="start b" />
+            <SelectField field="r range" selected="True" />
+            <SelectField field="g range" selected="True" />
+            <SelectField field="b range" selected="True" />
+            <SelectField field="range type" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="start r" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="start g" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="start b" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: [Middle Color R] - [Start Color R]" type="Int16" />
+            <Field name="g range" source="Formula: [Middle Color G] - [Start Color B]" type="Int16" />
+            <Field name="b range" source="Formula: [Middle Color B] - [Start Color B]" type="Int16" />
+            <Field name="range type" size="2147483647" source="Formula: 'lower'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Middle Color R" selected="True" rename="start r" />
+            <SelectField field="Middle Color G" selected="True" rename="start g" />
+            <SelectField field="Middle Color B" selected="True" rename="start b" />
+            <SelectField field="r range" selected="True" />
+            <SelectField field="g range" selected="True" />
+            <SelectField field="b range" selected="True" />
+            <SelectField field="range type" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="start r" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="start g" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="start b" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: [End Color R] - [Middle Color R]" type="Int16" />
+            <Field name="g range" source="Formula: [End Color G] - [Middle Color G]" type="Int16" />
+            <Field name="b range" source="Formula: [End Color B] - [Middle Color B]" type="Int16" />
+            <Field name="range type" size="2147483647" source="Formula: 'upper'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="654" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Error</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="start r" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="start g" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="start b" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="g range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="b range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="range type" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="750" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>range type</FieldFind>
+          <FieldSearch>range type</FieldSearch>
+          <ReplaceFoundField>range type</ReplaceFoundField>
+          <FindMode>FindWhole</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Append</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields>
+            <Field field="start r" />
+            <Field field="start g" />
+            <Field field="start b" />
+            <Field field="r range" />
+            <Field field="g range" />
+            <Field field="b range" />
+          </ReplaceAppendFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="range type" size="2147483647" source="Formula: IF   [Ratio] &lt; 0.5&#xA;THEN 'lower'&#xA;ELSE 'upper'&#xA;ENDIF" type="V_String" />
+            <Field name="color ratio" source="Formula: IF   [range type] = 'lower'&#xA;THEN [Ratio] / 0.5&#xA;ELSE ([Ratio] - 0.5) / 0.5&#xA;ENDIF" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="start r" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="start g" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="start b" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="g range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="b range" source="Formula: (Multiple Sources)" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="846" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[start r] + ([r range] * [color ratio])" field="r" size="1" type="Byte" />
+            <FormulaField expression="[start g] + ([g range] * [color ratio])" field="g" size="1" type="Byte" />
+            <FormulaField expression="[start b] + ([b range] * [color ratio])" field="b" size="1" type="Byte" />
+            <FormulaField expression="&quot;#&quot; +&#xA;PadLeft(IntToHex([r]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([g]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([b]), 2, &quot;0&quot;) +&#xA;&quot;FF&quot;" field="line color" size="9" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>rgba</AnnotationText>
+          <DefaultAnnotationText>r = [start r] + ([r range] * [color ratio])
+g = [start g] + ([g range] * [color ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="range type" size="2147483647" source="Formula: IF   [Ratio] &lt; 0.5&#xA;THEN 'lower'&#xA;ELSE 'upper'&#xA;ENDIF" type="V_String" />
+            <Field name="color ratio" source="Formula: IF   [range type] = 'lower'&#xA;THEN [Ratio] / 0.5&#xA;ELSE ([Ratio] - 0.5) / 0.5&#xA;ENDIF" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="start r" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="start g" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="start b" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="g range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="b range" source="Formula: (Multiple Sources)" type="Int16" />
+            <Field name="r" source="Formula: [start r] + ([r range] * [color ratio])" type="Byte" />
+            <Field name="g" source="Formula: [start g] + ([g range] * [color ratio])" type="Byte" />
+            <Field name="b" source="Formula: [start b] + ([b range] * [color ratio])" type="Byte" />
+            <Field name="line color" size="9" source="Formula: &quot;#&quot; +&#xA;PadLeft(IntToHex([r]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([g]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([b]), 2, &quot;0&quot;) +&#xA;&quot;FF&quot;" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Segments" />
+            <Field name="Start Color" />
+            <Field name="Middle Color" />
+            <Field name="End Color" />
+          </Fields>
+          <Data>
+            <r>
+              <c>9</c>
+              <c>#FF0000</c>
+              <c>#FFFF00</c>
+              <c>#00FF00</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="Middle Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="462" y="138" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="174" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>Segment</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>0</Expression_Init>
+          <Expression_Cond>Segment &lt; [Segments]</Expression_Cond>
+          <Expression_Loop>[Segment] + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="TextInput:" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="270" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="([Segment] / [Segments] * 180) - 90" field="Start Angle" size="8" type="Double" />
+            <FormulaField expression="IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" field="Start Angle" size="8" type="Double" />
+            <FormulaField expression="(([Segment] + 1) / [Segments] * 180) - 90" field="End Angle" size="8" type="Double" />
+            <FormulaField expression="IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" field="End Angle" size="8" type="Double" />
+            <FormulaField expression="[Segments] - 1" field="Segments" size="1" type="Byte" />
+            <FormulaField expression="[Segment] / Segments" field="Ratio" size="8" type="Double" />
+            <FormulaField expression="'butt'" field="end cap" size="2147483647" type="V_String" />
+            <FormulaField expression="50" field="Line Width" size="8" type="Double" />
+            <FormulaField expression="250 - ([Line Width] / 2)" field="Radius" size="8" type="Double" />
+            <FormulaField expression="250" field="x" size="8" type="Int64" />
+            <FormulaField expression="250" field="y" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Format and Size</AnnotationText>
+          <DefaultAnnotationText>Start Angle = ([Segment] / [Segments] * 180) - 90
+Start Angle = IF   [Segment] &gt;...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="366" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Group</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType size="6">String</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="750" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[End Color R] - [Start Color R]" field="r range" size="2" type="Int16" />
+            <FormulaField expression="[End Color G] - [Start Color B]" field="g range" size="2" type="Int16" />
+            <FormulaField expression="[End Color B] - [Start Color B]" field="b range" size="2" type="Int16" />
+            <FormulaField expression="[Start Color R] + ([r range] * [Ratio])" field="r" size="1" type="Byte" />
+            <FormulaField expression="[Start Color G] + ([g range] * [Ratio])" field="g" size="1" type="Byte" />
+            <FormulaField expression="[Start Color B] + ([b range] * [Ratio])" field="b" size="1" type="Byte" />
+            <FormulaField expression="&quot;#&quot; +&#xA;PadLeft(IntToHex([r]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([g]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([b]), 2, &quot;0&quot;) +&#xA;&quot;FF&quot;" field="line color" size="9" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>rgba</AnnotationText>
+          <DefaultAnnotationText>r range = [End Color R] - [Start Color R]
+g range = [End Color G] - [Start Color...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Start Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="End Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="r range" source="Formula: [End Color R] - [Start Color R]" type="Int16" />
+            <Field name="g range" source="Formula: [End Color G] - [Start Color B]" type="Int16" />
+            <Field name="b range" source="Formula: [End Color B] - [Start Color B]" type="Int16" />
+            <Field name="r" source="Formula: [Start Color R] + ([r range] * [Ratio])" type="Byte" />
+            <Field name="g" source="Formula: [Start Color G] + ([g range] * [Ratio])" type="Byte" />
+            <Field name="b" source="Formula: [Start Color B] + ([b range] * [Ratio])" type="Byte" />
+            <Field name="line color" size="9" source="Formula: &quot;#&quot; +&#xA;PadLeft(IntToHex([r]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([g]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([b]), 2, &quot;0&quot;) +&#xA;&quot;FF&quot;" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="462" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Start Color" />
+            <Field name="End Color" />
+            <Field name="Group" selected="False" />
+            <Field name="end cap" selected="False" />
+            <Field name="Middle Color" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn><![CDATA[ R]]></NewFieldAddOn>
+          <NewFieldAddOnPos>Suffix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>HexToNumber(Substring([_CurrentField_],1,2))</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Int16" size="2" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>r</AnnotationText>
+          <DefaultAnnotationText>HexToNumber(Substring([_CurrentField_],1,2))</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="558" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Start Color" />
+            <Field name="End Color" />
+            <Field name="Group" selected="False" />
+            <Field name="end cap" selected="False" />
+            <Field name="Middle Color" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn><![CDATA[ G]]></NewFieldAddOn>
+          <NewFieldAddOnPos>Suffix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>HexToNumber(Substring([_CurrentField_],3,2))</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Int16" size="2" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>g</AnnotationText>
+          <DefaultAnnotationText>HexToNumber(Substring([_CurrentField_],3,2))</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="654" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Start Color" />
+            <Field name="End Color" />
+            <Field name="Group" selected="False" />
+            <Field name="end cap" selected="False" />
+            <Field name="Middle Color" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn><![CDATA[ B]]></NewFieldAddOn>
+          <NewFieldAddOnPos>Suffix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>HexToNumber(Substring([_CurrentField_],5,2))</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Int16" size="2" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>b</AnnotationText>
+          <DefaultAnnotationText>HexToNumber(Substring([_CurrentField_],5,2))</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="6" source="RecordID: Starting Value=1" type="String" />
+            <Field name="Segments" source="Formula: [Segments] - 1" type="Byte" />
+            <Field name="Start Color" size="7" source="TextInput:" type="String" />
+            <Field name="End Color" size="7" source="TextInput:" type="String" />
+            <Field name="Segment" type="Int32" />
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="Ratio" source="Formula: [Segment] / Segments" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="Start Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="End Color R" source="Formula: HexToNumber(Substring([_CurrentField_],1,2))" type="Int16" />
+            <Field name="Start Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="End Color G" source="Formula: HexToNumber(Substring([_CurrentField_],3,2))" type="Int16" />
+            <Field name="Start Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+            <Field name="End Color B" source="Formula: HexToNumber(Substring([_CurrentField_],5,2))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="846" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Start Angle" selected="True" />
+            <SelectField field="End Angle" selected="True" />
+            <SelectField field="end cap" selected="True" />
+            <SelectField field="Line Width" selected="True" />
+            <SelectField field="Radius" selected="True" />
+            <SelectField field="x" selected="True" />
+            <SelectField field="y" selected="True" />
+            <SelectField field="line color" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Start Angle" source="Formula: IF   [Segment] &gt; 0&#xA;THEN [Start Angle] - 0.1&#xA;ELSE [Start Angle]&#xA;ENDIF" type="Double" />
+            <Field name="End Angle" source="Formula: IF   [Segment] &lt; [Segments]&#xA;THEN [End Angle] + 0.1&#xA;ELSE [End Angle]&#xA;ENDIF" type="Double" />
+            <Field name="end cap" size="2147483647" source="Formula: 'butt'" type="V_String" />
+            <Field name="Line Width" source="Formula: 50" type="Double" />
+            <Field name="Radius" source="Formula: 250 - ([Line Width] / 2)" type="Double" />
+            <Field name="x" source="Formula: 250" type="Int64" />
+            <Field name="y" source="Formula: 250" type="Int64" />
+            <Field name="line color" size="9" source="Formula: &quot;#&quot; +&#xA;PadLeft(IntToHex([r]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([g]), 2, &quot;0&quot;) +&#xA;PadLeft(IntToHex([b]), 2, &quot;0&quot;) +&#xA;&quot;FF&quot;" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="846" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="image" size="2147483647" source="New Image" type="Blob" />
+            <Field name="width" source="New Image" type="Int32" />
+            <Field name="height" source="New Image" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="image" size="2147483647" source="New Image" type="Blob" />
+            <Field name="width" source="New Image" type="Int32" />
+            <Field name="height" source="New Image" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="DrawPrimitives">
+        <Position x="942" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageField>image</ImageField>
+          <LineWidth>Line Width</LineWidth>
+          <LineColor>line color</LineColor>
+          <LineDash>
+          </LineDash>
+          <LineEndCap>end cap</LineEndCap>
+          <FillColor>
+          </FillColor>
+          <TypeOf>Arc</TypeOf>
+          <Group>
+          </Group>
+          <PathX1>
+          </PathX1>
+          <PathY1>
+          </PathY1>
+          <PathX2>
+          </PathX2>
+          <PathY2>
+          </PathY2>
+          <PathX3>
+          </PathX3>
+          <PathY3>
+          </PathY3>
+          <PathX4>
+          </PathX4>
+          <PathY4>
+          </PathY4>
+          <X>x</X>
+          <Y>y</Y>
+          <Radius>Radius</Radius>
+          <Width>
+          </Width>
+          <Height>
+          </Height>
+          <Sides>
+          </Sides>
+          <CornerRadius>
+          </CornerRadius>
+          <Rotation>
+          </Rotation>
+          <StartAngle>Start Angle</StartAngle>
+          <EndAngle>End Angle</EndAngle>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" type="Blob" source="Draw Primitives" size="20" scale="0">
+            </Field>
+            <Field name="width" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+            <Field name="height" type="Int32" source="Draw Primitives" size="4" scale="0">
+            </Field>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="render_image.dll" EngineDllEntryPoint="DrawPrimitivesEntry" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="1038" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="image" size="2147483647" source="Draw Primitives" type="Blob" />
+            <Field name="width" source="Draw Primitives" type="Int32" />
+            <Field name="height" source="Draw Primitives" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="606" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Colorblind</Name>
+          <DefaultAnnotationText>Colorblind</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="846" y="150" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Overlay" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="8" Connection="Action" />
+      <Destination ToolID="4" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="4" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="11" Connection="Question" />
+      <Destination ToolID="8" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="15" Connection="Question" />
+      <Destination ToolID="17" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="15" Connection="Question" />
+      <Destination ToolID="37" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="17" Connection="Action" />
+      <Destination ToolID="16" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="50" Connection="Action" />
+      <Destination ToolID="46" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="48" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="48" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="32" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="21" Connection="Primitives" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Left" />
+      <Destination ToolID="21" Connection="Image" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="37" Connection="Action" />
+      <Destination ToolID="36" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="47" Connection="Primitives" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Right" />
+      <Destination ToolID="47" Connection="Image" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="49" Connection="Question" />
+      <Destination ToolID="50" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Achieved</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Name</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Segments</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Colorblind</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>render gauge</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e71080a7-df65-466e-bcec-19aecf816f3b" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="e71080a7-df65-466e-bcec-19aecf816f3b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValueFormula</Type>
+              <Description />
+              <ToolId value="8" />
+              <Expression>((ToNumber([#1]) / 100) * 180) + -90</Expression>
+              <Destination>4/Rotation</Destination>
+              <Mode>Expression</Mode>
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="17" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>16/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="37" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>36/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="50" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>46/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (1)</Name>
+          <ToolId value="1" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (9)</Description>
+              <Name>Macro Output (9)</Name>
+              <ToolId value="9" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>% Achieved</Description>
+              <Name>Achieved</Name>
+              <ToolId value="11" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>Name</Description>
+              <Name>Name</Name>
+              <ToolId value="12" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>Segments</Description>
+              <Name>Segments</Name>
+              <ToolId value="15" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Alternative, colorblind-friendly palette</Description>
+              <Name>Colorblind</Name>
+              <ToolId value="49" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AllSame</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>Achieved</Name>
+            <Description>% Achieved</Description>
+          </ControlParam>
+          <ControlParam>
+            <Name>Name</Name>
+            <Description>Name</Description>
+          </ControlParam>
+          <ControlParam>
+            <Name>Segments</Name>
+            <Description>Segments</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="4" Selected="True" />
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="9" Selected="True" />
+        <Tool ToolId="20" Selected="True" />
+        <Tool ToolId="21" Selected="True" />
+        <Tool ToolId="47" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

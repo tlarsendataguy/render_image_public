@@ -1,0 +1,24 @@
+<InDBConnection>
+  <ConnectionType>Snowflake</ConnectionType>
+  <IsNative>True</IsNative>
+  <DbToAlteryx>
+    <Connection>odbc:DRIVER=SnowflakeDSIIDriver;SERVER=pe04767.east-us-2.azure.snowflakecomputing.com;DATABASE=NASR;SCHEMA=PUBLIC;WAREHOUSE=COMPUTE_WH;UID=NASR_ACCESS;PWD=__EncPwd1__</Connection>
+    <DecryptionAllowed>False</DecryptionAllowed>
+    <Passwords>44D257732B61A94900C236E237A8CB4B9C23F1682C8CFAC1082FA1B5D38C27795E7601A17</Passwords>
+    <FormatSpecificOptions>
+      <ReadUncommitted>False</ReadUncommitted>
+      <TableStyle>Quoted</TableStyle>
+    </FormatSpecificOptions>
+    <Type>SnowflakeODBC</Type>
+  </DbToAlteryx>
+  <AlteryxToDb OutputDriverSelection="Specified">
+    <Connection>odbc:DRIVER=SnowflakeDSIIDriver;SERVER=pe04767.east-us-2.azure.snowflakecomputing.com;DATABASE=NASR;SCHEMA=PUBLIC;WAREHOUSE=COMPUTE_WH;UID=NASR_ACCESS;PWD=__EncPwd1__</Connection>
+    <DecryptionAllowed>False</DecryptionAllowed>
+    <Passwords>44D257732B61A94900C236E237A8CB4B9C23F1682C8CFAC1082FA1B5D38C27795E7601A17</Passwords>
+    <FormatSpecificOptions>
+      <BulkLoadSize>128</BulkLoadSize>
+      <TableStyle>Quoted</TableStyle>
+    </FormatSpecificOptions>
+    <Type>SnowflakeBulkLoader</Type>
+  </AlteryxToDb>
+</InDBConnection>
